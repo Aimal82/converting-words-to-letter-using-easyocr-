@@ -1,0 +1,15 @@
+import easyocr
+
+reader = easyocr.Reader(['en'])
+result = reader.readtext(('image6.jpg'))
+
+#image5.jpg is cursive and the program runs smoothly
+#image4.jpg is cursive but program cant
+#recognize letters separately and accurately
+#image6.jpg had small words in the bottom
+#progream cant read and process small lettering
+
+for(bbox, text, prob) in result:
+    print(text)
+
+print(result)
